@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The economic value of college majors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="majors.css">
+  <script src="//code.jquery.com/jquery-3.2.0.min.js" type="text/javascript"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="//code.highcharts.com/highcharts.js" type="text/javascript"></script>
+  <script src="//code.highcharts.com/highcharts-more.js" type="text/javascript"></script>
+  <script src="//code.highcharts.com/modules/no-data-to-display.js" type="text/javascript"></script>
+  <!--script src="//code.highcharts.com/modules/data.js" type="text/javascript"></script -->
+  <script src="//code.highcharts.com/maps/modules/map.js" type="text/javascript"></script>
+  <script src="//code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+  <script src="majors.js" type="text/javascript"></script>
+</head>
+
+<body>
+<h1>Explore majors</h1>
+  <div class="panel-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Undergraduate major&nbsp
+          <span class="glyphicon glyphicon-info-sign" id="explain1" data-toggle="modal" data-target="#notes1"
+            title="Field of study when respondents were undergraduates. This is not necessarily the same field of study as their advanced degree. Click for additional information.">
+          </span></h4>
+      </div>
+      <div class="panel-body">
+       <ul class="fa-ul nav navMajor">
+          <li><a title="Click to explore this major" data-toggle="pill" id="all-major-groups-icon"><i class="fa fa-university"></i>&nbsp All major groups</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="agriculture-and-natural-resources-icon"><i class="fa fa-leaf"></i>&nbsp Agriculture and natural resources</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="architecture-and-engineering-icon"><i class="fa fa-cogs"></i>&nbsp Architecture and engineering</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="arts-icon"><i class="fa fa-paint-brush"></i>&nbsp Arts</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="biology-and-life-sciences-icon"><i class="fa fa-eyedropper"></i>&nbsp Biology and life sciences</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="business-icon"><i class="fa fa-briefcase"></i>&nbsp Business</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="communications-and-journalism-icon"><i class="fa fa-newspaper-o"></i>&nbsp Communications and journalism</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="computers-statistics-and-mathematics-icon"><i class="fa fa-bar-chart"></i>&nbsp Computers, statistics, and mathematics</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="education-icon"><i class="fa fa-graduation-cap"></i>&nbsp Education</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="health-icon"><i class="fa fa-heartbeat"></i>&nbsp Health</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="humanities-and-liberal-arts-icon"><i class="fa fa-fire"></i>&nbsp Humanities and liberal arts</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="industrial-arts-consumer-services-and-recreation-icon"><i class="fa fa-trophy"></i>&nbsp Industrial arts, consumer services, and recreation</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="law-and-public-policy-icon"><i class="fa fa-gavel"></i>&nbsp Law and public policy</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="physical-sciences-icon"><i class="fa fa-flask"></i>&nbsp Physical sciences</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="psychology-and-social-work-icon"><i class="fa fa-users"></i>&nbsp Psychology and social work</a></li>
+          <li><a title="Click to explore this major" data-toggle="pill" id="social-sciences-icon"><i class="fa fa-globe"></i>&nbsp Social sciences</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">States</h4>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="state" class="col-sm-2 control-label">State</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="state" name="state">
+              <option value="National">National</option>
+              <option value="AK">Alaska</option>
+              <option value="AL">Alabama</option>
+              <option value="AR">Arkansas</option>
+              <option value="AZ">Arizona</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DC">District of Columbia</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="IA">Iowa</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MD">Maryland</option>
+              <option value="ME">Maine</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MO">Missouri</option>
+              <option value="MS">Mississippi</option>
+              <option value="MT">Montana</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="NE">Nebraska</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NV">Nevada</option>
+              <option value="NY">New York</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VA">Virginia</option>
+              <option value="VT">Vermont</option>
+              <option value="WA">Washington</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WV">West Virginia</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <div id="selState" class="col-sm-12">Currently viewing national data.</div>
+          <div id="usmap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+    <div class="well">
+      <h4 id="chartitle">The economic value of college majors</h4>
+      <h5></h5>
+      <div id="earn-chart"></div>
+      <div id="pop-chart"></div>
+    </div>
+    <span id="footnote"></span>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="notes1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="notesModalLabel"><em><strong>Notes on undergraduate major</strong></em></h5>
+        </div>
+        <div class="modal-body small">
+        <p>This is the major field of study when respondents were undergraduates. However, this is not necessarily the same field of study as their advanced degree.
+          A worker with a graduate degree might have been an engineering major as an undergraduate but received an graduate degree in business. In this case,
+          the undergraduate major of engineering is recorded and reported here.
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

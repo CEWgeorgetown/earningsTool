@@ -16,6 +16,10 @@ a:hover {
   font-weight: bold;
   background-color: #DCDCDC;
 }
+.toolCharts {
+  height: 70vh;
+  overflow:scroll;
+}
 
 .dd-nav {
   width: 100px;

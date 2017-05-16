@@ -150,10 +150,6 @@ function display_all_majors(pgba, pggrad, pstate) {
   // console.log(arr_pctbagmajor);
   $('#earn-chart').height(650);
   $('#pop-chart').height(650);
-  $("#footnote").html("<p>Source: U.S. Census Bureau, <em>American Community Survey</em> \
-  micro data, 2009-2011, based on full-time full-year workers age 25-59 with a Bachelor's \
-  degree but without a graduate degree. Percents may not sum to 100 because small sample \
-  sizes were excluded.</p>");
 
   /* Use of Bootstrap pill attribute with data-toggle to use active class renders
   href and data-target useless. Using jquery scrollTop instead */
@@ -654,11 +650,7 @@ function change_major(pmajorname, pbadata, pgraddata, pusall, pbagmajor, pgradgm
     $('.well h5').text(str_gmajor.replace('<br> ', '') + ': ' + pstate);
   } else {
     $('.well h5').text(str_gmajor.replace('<br> ', '') + ': National');
-  }
-  $("#footnote").html("<p>Source: U.S. Census Bureau, <em>American Community Survey</em> \
-  micro data, 2009-2011, based on full-time full-year workers age 25-59 with a Bachelor's \
-  degree but without a graduate degree. Percents may not sum to 100 because small sample \
-  sizes were excluded.</p>");
+  };
 }
 
 $(document).ready(function () {
@@ -1147,13 +1139,6 @@ $(document).ready(function () {
   $(".navMajor li").click(function () {
     $(".navMajor li").removeClass("active");
     $(this).addClass("active");
-  });
-  $("#explain1").click(function () {
-    if ($("#expandNote").css("display") === "none") {
-      $("#expandNote").css("display", "block");
-    } else {
-      $("#expandNote").css("display", "none");
-    }
   });
 
 });

@@ -199,10 +199,10 @@ function display_all_majors(pgba, pggrad, pstate) {
           hideDelay: 100,
           pointFormatter: function () {
             if (this.series.name === "Bachelor's degree") {
-              return "Median earnings: " + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>';
+              return "Median earnings: $" + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>';
             } else {
-              return "Median earnings: " + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' +
-                'Graduate boost: ' + Highcharts.numberFormat(this.dboost, 0) + " (" + this.boost + ")";
+              return "Median earnings: $" + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' +
+                'Graduate boost: $' + Highcharts.numberFormat(this.dboost, 0) + " (" + this.boost + ")";
             }
           }
         }
@@ -217,9 +217,9 @@ function display_all_majors(pgba, pggrad, pstate) {
           pointFormatter: function () {
             var diff = Math.round(this.high / 1000) * 1000 - Math.round(this.low / 1000) * 1000;
             return this.series.name + ': <br>' +
-              "25th percentile:" + Highcharts.numberFormat(Math.round(this.low / 1000) * 1000, 0) + '<br>' +
-              "75th percentile:" + Highcharts.numberFormat(Math.round(this.high / 1000) * 1000, 0) + '<br>' +
-              "Earnings difference: " + Highcharts.numberFormat(diff, 0);
+              "25th percentile: $" + Highcharts.numberFormat(Math.round(this.low / 1000) * 1000, 0) + '<br>' +
+              "75th percentile: $" + Highcharts.numberFormat(Math.round(this.high / 1000) * 1000, 0) + '<br>' +
+              "Earnings difference: $" + Highcharts.numberFormat(diff, 0);
           }
         }
       }
@@ -491,13 +491,13 @@ function change_major(pmajorname, pbadata, pgraddata, pusall, pbagmajor, pgradgm
               if (this.smpSz < 100) {
                 warnmsg = 'Sample size (' + this.smpSz + ') may be unreliable. <br>';
               }
-              return "Median earnings: " + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' + warnmsg;
+              return "Median earnings: $" + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' + warnmsg;
             } else {
               if (this.smpSz < 100) {
                 warnmsg = 'Sample size (' + this.smpSz + ') may be unreliable. <br>';
               }
-              return "Median earnings: " + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' +
-                'Graduate boost: ' + Highcharts.numberFormat(this.dboost, 0) + " (" + this.boost + ")" + '<br>' + warnmsg;
+              return "Median earnings: $" + Highcharts.numberFormat(Math.round(this.y / 1000) * 1000, 0) + '<br>' +
+                'Graduate boost: $' + Highcharts.numberFormat(this.dboost, 0) + " (" + this.boost + ")" + '<br>' + warnmsg;
             }
           }
         }
@@ -511,9 +511,9 @@ function change_major(pmajorname, pbadata, pgraddata, pusall, pbagmajor, pgradgm
           pointFormatter: function () {
             var diff = Math.round(this.high / 1000) * 1000 - Math.round(this.low / 1000) * 1000;
             return this.series.name + ': <br>' +
-              "25th percentile:" + Highcharts.numberFormat(Math.round(this.low / 1000) * 1000, 0) + '<br>' +
-              "75th percentile:" + Highcharts.numberFormat(Math.round(this.high / 1000) * 1000, 0) + '<br>' +
-              "Earnings difference: " + Highcharts.numberFormat(diff, 0);
+              "25th percentile: $" + Highcharts.numberFormat(Math.round(this.low / 1000) * 1000, 0) + '<br>' +
+              "75th percentile: $" + Highcharts.numberFormat(Math.round(this.high / 1000) * 1000, 0) + '<br>' +
+              "Earnings difference: $" + Highcharts.numberFormat(diff, 0);
           }
         }
       }
@@ -689,7 +689,8 @@ $(document).ready(function () {
   };
   Highcharts.setOptions({
     lang: {
-      noData: "No data on detailed <br> majors to display due <br> to insufficient sample size"
+      noData: "No data on detailed <br> majors to display due <br> to insufficient sample size",
+      thousandsSep: ","
     }
   })
   $.get('webbaplus_ftfy_25_59.txt', function (majorsdata, status) {

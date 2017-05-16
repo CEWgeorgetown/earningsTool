@@ -23,25 +23,25 @@ function pushData(dobj, things) {
     things[18] = "All U.S.";
   }
   dobj.push({'schl': things[0],
-          'dmajor': String(things[1]).replace(/['"]+/g, ''),
-          'type': parseFloat(things[2]),
-          'freq': parseFloat(things[3]),
-          'p50': parseFloat(things[4]),
-          'p25': parseFloat(things[5]),
-          'p75': parseFloat(things[6]),
-          'gradegftfy': parseFloat(things[7]),
-          'gradegall': parseFloat(things[8]),
-          'emprate': parseFloat(things[9]),
-          'pct_ts': parseFloat(things[10]),
-          'pct_tsg': parseFloat(things[11]),
-          'dboost': parseFloat(things[12]),
-          'boost': parseFloat(things[13]),
-          'pct_ts_all': parseFloat(things[14]),
-          'pct_tsg_all': parseFloat(things[15]),
-          'pct_gths': parseFloat(things[16]),
-          'pct_gthsftfy': parseFloat(things[17]),
-          'gmajor': String(things[18]).replace(/['"]+/g, '')
-          });
+    'dmajor': String(things[1]).replace(/['"]+/g, ''),
+    'type': parseFloat(things[2]),
+    'freq': parseFloat(things[3]),
+    'p50': parseFloat(things[4]),
+    'p25': parseFloat(things[5]),
+    'p75': parseFloat(things[6]),
+    'gradegftfy': parseFloat(things[7]),
+    'gradegall': parseFloat(things[8]),
+    'emprate': parseFloat(things[9]),
+    'pct_ts': parseFloat(things[10]),
+    'pct_tsg': parseFloat(things[11]),
+    'dboost': parseFloat(things[12]),
+    'boost': parseFloat(things[13]),
+    'pct_ts_all': parseFloat(things[14]),
+    'pct_tsg_all': parseFloat(things[15]),
+    'pct_gths': parseFloat(things[16]),
+    'pct_gthsftfy': parseFloat(things[17]),
+    'gmajor': String(things[18]).replace(/['"]+/g, '')
+  });
 }
 
 function pushStateData(dobj, things) {
@@ -53,26 +53,26 @@ function pushStateData(dobj, things) {
     things[1] = "All State: " + things[11];
   }
   dobj.push({'schl': things[0],
-          'dmajor': String(things[1]).replace(/['"]+/g, ''),
-          'type': parseFloat(things[2]),
-          'freq': parseFloat(things[3]),
-          'p50': parseFloat(things[4]),
-          'p25': parseFloat(things[5]),
-          'p75': parseFloat(things[6]),
-          'gradegftfy': parseFloat(things[7]),
-          'gradegall': parseFloat(things[8]),
-          'emprate': parseFloat(things[9]),
-          'pct_ts': parseFloat(things[10]),
-          'stabbr': things[11],
-          'pct_tsg': parseFloat(things[12]),
-          'dboost': parseFloat(things[13]),
-          'boost': parseFloat(things[14]),
-          'pct_ts_all': parseFloat(things[15]),
-          'pct_tsg_all': parseFloat(things[16]),
-          'pct_gths': parseFloat(things[17]),
-          'pct_gthsftfy': parseFloat(things[18]),
-          'gmajor': String(things[19]).replace(/['"]+/g, '')
-          });
+    'dmajor': String(things[1]).replace(/['"]+/g, ''),
+    'type': parseFloat(things[2]),
+    'freq': parseFloat(things[3]),
+    'p50': parseFloat(things[4]),
+    'p25': parseFloat(things[5]),
+    'p75': parseFloat(things[6]),
+    'gradegftfy': parseFloat(things[7]),
+    'gradegall': parseFloat(things[8]),
+    'emprate': parseFloat(things[9]),
+    'pct_ts': parseFloat(things[10]),
+    'stabbr': things[11],
+    'pct_tsg': parseFloat(things[12]),
+    'dboost': parseFloat(things[13]),
+    'boost': parseFloat(things[14]),
+    'pct_ts_all': parseFloat(things[15]),
+    'pct_tsg_all': parseFloat(things[16]),
+    'pct_gths': parseFloat(things[17]),
+    'pct_gthsftfy': parseFloat(things[18]),
+    'gmajor': String(things[19]).replace(/['"]+/g, '')
+  });
 }
 
 function noStateSelectedMsg() {
@@ -580,7 +580,7 @@ function change_major(pmajorname, pbadata, pgraddata, pusall, pbagmajor, pgradgm
     },
     noData: {
       style: {
-        "fontSize": "14px",
+        "fontSize": "12px",
         "fontWeight": "bold",
         "color": "#666"
       },
@@ -697,7 +697,7 @@ $(document).ready(function () {
   };
   Highcharts.setOptions({
     lang: {
-      noData: "No data on detailed majors to display due to insufficient sample size"
+      noData: "No data on detailed <br> majors to display due <br> to insufficient sample size"
     }
   })
   $.get('webbaplus_ftfy_25_59.txt', function (majorsdata, status) {
@@ -1144,8 +1144,16 @@ $(document).ready(function () {
       }]
   });
 
-  $(".navMajor li").click(function(){
+  $(".navMajor li").click(function () {
     $(".navMajor li").removeClass("active");
     $(this).addClass("active");
   });
+  $("#explain1").click(function () {
+    if ($("#expandNote").css("display") === "none") {
+      $("#expandNote").css("display", "block");
+    } else {
+      $("#expandNote").css("display", "none");
+    }
+  });
+
 });

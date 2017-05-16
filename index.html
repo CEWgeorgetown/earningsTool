@@ -24,34 +24,41 @@
   <div class="panel-group col-xs-12 col-sm-6 col-md-5 col-lg-4">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title">Undergraduate major&nbsp
-          <span class="glyphicon glyphicon-info-sign" id="explain1" data-toggle="modal" data-target="#notes1"
+        <a data-toggle = "collapse" href = "#majorsList"><h4 class="panel-title" id = "pmajorTitle">Undergraduate major&nbsp
+          <span class="glyphicon glyphicon-info-sign" id="explain1"
             title="Field of study when respondents were undergraduates. This is not necessarily the same field of study as their advanced degree. Click for additional information.">
-          </span></h4>
+          </span></h4></a>
       </div>
-      <div class="panel-body">
-       <ul class="fa-ul nav navMajor">
-          <li><a title="Click to explore this major" data-toggle="pill" id="all-major-groups-icon"><i class="fa fa-university"></i>&nbsp All major groups</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="agriculture-and-natural-resources-icon"><i class="fa fa-leaf"></i>&nbsp Agriculture and natural resources</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="architecture-and-engineering-icon"><i class="fa fa-cogs"></i>&nbsp Architecture and engineering</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="arts-icon"><i class="fa fa-paint-brush"></i>&nbsp Arts</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="biology-and-life-sciences-icon"><i class="fa fa-eyedropper"></i>&nbsp Biology and life sciences</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="business-icon"><i class="fa fa-briefcase"></i>&nbsp Business</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="communications-and-journalism-icon"><i class="fa fa-newspaper-o"></i>&nbsp Communications and journalism</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="computers-statistics-and-mathematics-icon"><i class="fa fa-bar-chart"></i>&nbsp Computers, statistics, and mathematics</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="education-icon"><i class="fa fa-graduation-cap"></i>&nbsp Education</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="health-icon"><i class="fa fa-heartbeat"></i>&nbsp Health</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="humanities-and-liberal-arts-icon"><i class="fa fa-fire"></i>&nbsp Humanities and liberal arts</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="industrial-arts-consumer-services-and-recreation-icon"><i class="fa fa-trophy"></i>&nbsp Industrial arts, consumer services, and recreation</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="law-and-public-policy-icon"><i class="fa fa-gavel"></i>&nbsp Law and public policy</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="physical-sciences-icon"><i class="fa fa-flask"></i>&nbsp Physical sciences</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="psychology-and-social-work-icon"><i class="fa fa-users"></i>&nbsp Psychology and social work</a></li>
-          <li><a title="Click to explore this major" data-toggle="pill" id="social-sciences-icon"><i class="fa fa-globe"></i>&nbsp Social sciences</a></li>
-        </ul>
+      <div id="expandNote">
+        This is the major field of study when respondents were undergraduates. However, this is not necessarily the same field of study as their advanced degree.
+        A worker with a graduate degree might have been an engineering major as an undergraduate but received an graduate degree in business. In this case,
+        the undergraduate major of engineering is recorded and reported here.
+      </div>
+      <div id="majorsList" class="panel-collapse collapse">
+        <div class="panel-body">
+         <ul class="fa-ul nav navMajor">
+            <li><a title="Click to explore this major" data-toggle="pill" id="all-major-groups-icon"><i class="fa fa-university"></i>&nbsp All major groups</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="agriculture-and-natural-resources-icon"><i class="fa fa-leaf"></i>&nbsp Agriculture and natural resources</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="architecture-and-engineering-icon"><i class="fa fa-cogs"></i>&nbsp Architecture and engineering</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="arts-icon"><i class="fa fa-paint-brush"></i>&nbsp Arts</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="biology-and-life-sciences-icon"><i class="fa fa-eyedropper"></i>&nbsp Biology and life sciences</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="business-icon"><i class="fa fa-briefcase"></i>&nbsp Business</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="communications-and-journalism-icon"><i class="fa fa-newspaper-o"></i>&nbsp Communications and journalism</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="computers-statistics-and-mathematics-icon"><i class="fa fa-bar-chart"></i>&nbsp Computers, statistics, and mathematics</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="education-icon"><i class="fa fa-graduation-cap"></i>&nbsp Education</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="health-icon"><i class="fa fa-heartbeat"></i>&nbsp Health</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="humanities-and-liberal-arts-icon"><i class="fa fa-fire"></i>&nbsp Humanities and liberal arts</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="industrial-arts-consumer-services-and-recreation-icon"><i class="fa fa-trophy"></i>&nbsp Industrial arts, consumer services, and recreation</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="law-and-public-policy-icon"><i class="fa fa-gavel"></i>&nbsp Law and public policy</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="physical-sciences-icon"><i class="fa fa-flask"></i>&nbsp Physical sciences</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="psychology-and-social-work-icon"><i class="fa fa-users"></i>&nbsp Psychology and social work</a></li>
+            <li><a title="Click to explore this major" data-toggle="pill" id="social-sciences-icon"><i class="fa fa-globe"></i>&nbsp Social sciences</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="panel panel-default" id="state-panel">
+      <div class="panel-heading" id="state-panel-heading">
         <h4 class="panel-title">States</h4>
       </div>
       <div class="panel-body">
@@ -128,27 +135,6 @@
       <div id="pop-chart"></div>
     </div>
     <span id="footnote"></span>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal" id="notes1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h5 class="modal-title" id="notesModalLabel"><em><strong>Notes on undergraduate major</strong></em></h5>
-        </div>
-        <div class="modal-body small">
-        <p>This is the major field of study when respondents were undergraduates. However, this is not necessarily the same field of study as their advanced degree.
-          A worker with a graduate degree might have been an engineering major as an undergraduate but received an graduate degree in business. In this case,
-          the undergraduate major of engineering is recorded and reported here.
-        </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
   </div>
 
 </body>

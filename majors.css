@@ -18,16 +18,28 @@ a:hover {
 }
 .toolCharts {
   height: 70vh;
-  overflow:scroll;
+  overflow-y: scroll;
 }
-
 .dd-nav {
   width: 100px;
   font-size: 1.2em;
   font-weight: normal;
 }
-ul.dropdown-menu {
-  width: 400%;
+#state-panel {
+  border-width: 0;
+}
+div#state-panel-heading.panel-heading {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(221, 221, 221);
+}
+#expandNote {
+  display: none;
+  margin: 10px 10px 0 10px;
+  font-size: 0.9em;
+}
+#pmajorTitle {
+  color: rgb(51, 51, 51);
 }
 #selState {
   padding-top: 5px;
@@ -35,21 +47,26 @@ ul.dropdown-menu {
 #btn-map{
   padding-left: 10px;
 }
+#usmap {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 450px;
+  width: 350px;
+}
 /*
-@media screen and (min-width: 0px) and (max-width: 992px) {
-  #usmap { display: none; }
+#usmap#highcharts-jc6ypwe-0.highcharts-container {
+  height: 350px;
+  width: 300px;
 }
 */
-#usmap {
-  padding-top: : 0;
-  margin-top: 0;
-  height: 1000%;
-  width: 100%;
-}
-
 #footnote {
   padding-top: 20px;
   font-size: 90%;
+}
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  #usmap { display: none; }
 }
 
 #all-major-groups-icon {
